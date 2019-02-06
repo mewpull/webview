@@ -1,16 +1,13 @@
 # webview
 
-[![Join the chat at https://gitter.im/zserge/webview](https://badges.gitter.im/zserge/webview.svg)](https://gitter.im/zserge/webview?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/zserge/webview.svg?branch=master)](https://travis-ci.org/zserge/webview)
-[![Build status](https://ci.appveyor.com/api/projects/status/ksii33qx18d94h6v?svg=true)](https://ci.appveyor.com/project/zserge/webview)
-[![GoDoc](https://godoc.org/github.com/zserge/webview?status.svg)](https://godoc.org/github.com/zserge/webview)
-[![Go Report Card](https://goreportcard.com/badge/github.com/zserge/webview)](https://goreportcard.com/report/github.com/zserge/webview)
-
 ## Why does this fork exist?
 
 There are a number of changes that are needed for the Wails framework that wouldn't fit in with the goals of the upstream project. Updates that would benefit the upstream project will be contributed wherever possible. This fork is not suitable for projects outside of Wails, so if you need a webview library, please check out the [original project](https://github.com/zserge/webview).
 
-## About
+---
+> Original Documentation
+
+# webview
 
 A tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. Also, there are [Rust bindings](https://github.com/Boscop/webview-rs), [Python bindings](https://github.com/zserge/webview-python), [Nim bindings](https://github.com/oskca/webview), [Haskell](https://github.com/lettier/webviewhs) and [C# bindings](https://github.com/iwillspeak/webview-cs) available.
 
