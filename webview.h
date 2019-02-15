@@ -2042,7 +2042,7 @@ struct webview_priv
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Paste"
                                        action:@selector(paste:)
-                                keyEquivalent:@"c"] autorelease];
+                                keyEquivalent:@"p"] autorelease];
     [appMenu addItem:item];
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Select All"
