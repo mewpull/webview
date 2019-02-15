@@ -2035,6 +2035,23 @@ struct webview_priv
     [appMenu addItem:item];
     [appMenu addItem:[NSMenuItem separatorItem]];
 
+    item = [[[NSMenuItem alloc] initWithTitle:@"Copy"
+                                       action:@selector(copy:)
+                                keyEquivalent:@"c"] autorelease];
+    [appMenu addItem:item];
+
+    item = [[[NSMenuItem alloc] initWithTitle:@"Paste"
+                                       action:@selector(paste:)
+                                keyEquivalent:@"c"] autorelease];
+    [appMenu addItem:item];
+
+    item = [[[NSMenuItem alloc] initWithTitle:@"Select All"
+                                       action:@selector(selectAll:)
+                                keyEquivalent:@"a"] autorelease];
+    [appMenu addItem:item];
+
+    [appMenu addItem:[NSMenuItem separatorItem]];
+
     title = [@"Quit " stringByAppendingString:appName];
     item = [[[NSMenuItem alloc] initWithTitle:title
                                        action:@selector(terminate:)
