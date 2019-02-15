@@ -2037,16 +2037,19 @@ struct webview_priv
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Copy"
                                        action:@selector(copy:)
+                                       target:nil
                                 keyEquivalent:@"c"] autorelease];
     [appMenu addItem:item];
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Paste"
                                        action:@selector(paste:)
+                                       target:nil
                                 keyEquivalent:@"p"] autorelease];
     [appMenu addItem:item];
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Select All"
                                        action:@selector(selectAll:)
+                                       target:nil
                                 keyEquivalent:@"a"] autorelease];
     [appMenu addItem:item];
 
