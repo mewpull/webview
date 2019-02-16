@@ -2011,6 +2011,7 @@ struct webview_priv
     NSMenu *menubar = [[[NSMenu alloc] initWithTitle:@""] autorelease];
 
     NSString *appName = [[NSProcessInfo processInfo] processName];
+
     NSMenuItem *appMenuItem =
         [[[NSMenuItem alloc] initWithTitle:appName action:NULL keyEquivalent:@""]
             autorelease];
@@ -2035,23 +2036,32 @@ struct webview_priv
     [appMenu addItem:item];
     [appMenu addItem:[NSMenuItem separatorItem]];
 
+    NSMenuItem *editMenuItem =
+        [[[NSMenuItem alloc] initWithTitle:@"Edit" action:NULL keyEquivalent:@""]
+            autorelease];
+    NSMenu *editMenu = [[[NSMenu alloc] initWithTitle:@"Edit"] autorelease];
+    [editMenuItem setSubmenu:editMenu];
+    [menubar addItem:editMenuItem];
+
+    item = [[[NSMenuItem alloc] initWithTitle:@"Cut"
+                                       action:@selector(cut:)
+                                keyEquivalent:@"x"] autorelease];
+    [editMenu addItem:item];
+
     item = [[[NSMenuItem alloc] initWithTitle:@"Copy"
                                        action:@selector(copy:)
-                                       target:nil
                                 keyEquivalent:@"c"] autorelease];
-    [appMenu addItem:item];
+    [editMenu addItem:item];
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Paste"
                                        action:@selector(paste:)
-                                       target:nil
-                                keyEquivalent:@"p"] autorelease];
-    [appMenu addItem:item];
+                                keyEquivalent:@"v"] autorelease];
+    [editMenu addItem:item];
 
     item = [[[NSMenuItem alloc] initWithTitle:@"Select All"
                                        action:@selector(selectAll:)
-                                       target:nil
                                 keyEquivalent:@"a"] autorelease];
-    [appMenu addItem:item];
+    [editMenu addItem:item];
 
     [appMenu addItem:[NSMenuItem separatorItem]];
 
