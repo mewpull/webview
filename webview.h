@@ -2010,17 +2010,14 @@ struct webview_priv
 
     NSMenu *menubar = [[[NSMenu alloc] initWithTitle:@""] autorelease];
 
-    NSString *appName = [[NSProcessInfo processInfo] processName];
-
     NSMenuItem *appMenuItem =
-        [[[NSMenuItem alloc] initWithTitle:appName action:NULL keyEquivalent:@""]
+        [[[NSMenuItem alloc] initWithTitle:@"wails app" action:NULL keyEquivalent:@""]
             autorelease];
-    NSMenu *appMenu = [[[NSMenu alloc] initWithTitle:appName] autorelease];
+    NSMenu *appMenu = [[[NSMenu alloc] initWithTitle:@"wails app"] autorelease];
     [appMenuItem setSubmenu:appMenu];
     [menubar addItem:appMenuItem];
 
-    NSString *title = [@"Hide " stringByAppendingString:appName];
-    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:title
+    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:@"Hide"
                                                    action:@selector(hide:)
                                             keyEquivalent:@"h"] autorelease];
     [appMenu addItem:item];
@@ -2065,8 +2062,7 @@ struct webview_priv
 
     [appMenu addItem:[NSMenuItem separatorItem]];
 
-    title = [@"Quit " stringByAppendingString:appName];
-    item = [[[NSMenuItem alloc] initWithTitle:title
+    item = [[[NSMenuItem alloc] initWithTitle:@"Quit"
                                        action:@selector(terminate:)
                                 keyEquivalent:@"q"] autorelease];
     [appMenu addItem:item];
