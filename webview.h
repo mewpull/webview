@@ -1994,9 +1994,11 @@ struct webview_priv
     [w->priv.window orderFrontRegardless];
 
     // Disable scrolling - make this configurable
-    // [[[w->priv.webview mainFrame] frameView] setAllowsScrolling:NO];
+    [[[[w->priv.webview mainFrame] documentView] enclosingScrollView] setVerticalScrollElasticity:NSScrollElasticityNone];
+    // [w->priv.webview 
 
     //
+
     // ----> Enables WebGL but won't pass the app store guidelines
     //
     // WebPreferences *p = [w->priv.webview preferences];
